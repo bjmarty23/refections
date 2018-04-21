@@ -8,8 +8,8 @@ CREATE TABLE "reflection" (
   "topic" varchar(120),
   "description" varchar(480),
   "bookmarked" boolean default false,
-  "date" date not null default CURRENT_DATE
-);
+  /* "date" date not null default CURRENT_DATE*/
+  );
 
 -- Sample reflection
 INSERT INTO "reflection" ("topic", "description")

@@ -20,6 +20,13 @@ npm run client
 ```
 
 ### ADD NEW REFLECTION
+##Base Goals
+- Start on client side routing
+- Compoenents
+- routes
+- server
+- store
+
 
 > NOTE: As a baseline requirement, you should use Redux to store your data. Using Sagas is a **stretch goal**.
 
