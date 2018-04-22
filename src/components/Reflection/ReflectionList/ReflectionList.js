@@ -47,15 +47,15 @@ class ReflectionList extends Component {
         return(
             <div>
            <pre>{JSON.stringify(this.props.reduxState)}</pre> 
-            {this.props.ReflectionList.id}
-            {this.props.ReflectionList.topic}
-            {this.props.ReflectionList.description}
-            {this.props.ReflectionList.bookmarked}
-            {this.props.ReflectionList.date}
+            {this.props.reflection.id}
+            {this.props.reflection.topic}
+            {this.props.reflection.description}
+            {this.props.reflection.bookmarked}
+            {this.props.reflection.date}
             <button onClick={this.handleClick}>Add New</button>
             </div>
         )
-    }
+    }//switching ReflectionList to reflection
 
 }// the component and component list do not match i bet this where 
 //the error is that is stopping the server from running
