@@ -16,24 +16,25 @@ class Reflection extends Component {
         })
     }
 
-    render(){
-        console.log(this.props.reduxState)
-        let reflection = this.props.reduxState.reflectionListReducer.map((reflection) => {
+    render() {
+        
+        let reflections = this.props.reduxState.reflectionListReducer.map((reflection) => {
+            console.log(reflections)
             return (
                 <ReflectionList key = {reflection.id}
-                topic = {reflection.topic}
-                description = {reflection.description}
-                bookmarked = {reflection.bookmarked}
-                date = {reflection.date}
-                reflection= {reflection}/>
+                // topic = {reflection.topic}
+                // description = {reflection.description}
+                // // bookmarked = {reflection.bookmarked}
+                // date = {reflection.date}
+                reflection= {reflection} />
             )
-        })
+        });
+
         return(
-            <div>
-                <p>REFLECTION</p>
-                {reflection}
+            <div className="reflection">
+                {reflections}
             </div>
-        );
+        )
     }
 }
 

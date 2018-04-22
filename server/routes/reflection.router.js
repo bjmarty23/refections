@@ -1,11 +1,11 @@
-const router = require('express').Router;
+const router = require('express').Router();
 const pool = require('../modules/pool');
 
 
 //Get reflections from database
 router.get('/', (req, res) => {
     const queryText =  `SELECT * FROM reflection ORDER by date`;
-    pool.query(querytext)
+    pool.query(queryText)
     .then( (result) => {
         res.send(result.rows);
     }).catch( (error) => {
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 })//end router get 
 
 //Post reflection to the database
-router.post('/reflection', (req, res) => {
+router.post('/', (req, res) => {
     let reflection = req.body;
     const queryText = `INSERT INTO "reflection" ("topic", "description")
                         VALUES ($1, $2)`;

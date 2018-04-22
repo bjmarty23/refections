@@ -6,15 +6,18 @@ const mapStateToProps = reduxState => ({
 });
 
 class ReflectionList extends Component {
+    // constructor(props){
+    //     super(props)
     state={
         newReflection: {
             id: '',
             topic: '',
             description: '',
-            bookmarked: '',
+            // bookmarked: '',
             date: ''
        }
-    }
+    // }
+}
 
     //Posting new reflec to db
     addNewReflection=(reflection)=> {
@@ -44,15 +47,20 @@ class ReflectionList extends Component {
     }
 
     render(){
+        // console.log(this.props.reduxState.
         return(
-            <div>
-           <pre>{JSON.stringify(this.props.reduxState)}</pre> 
-            {this.props.reduxState.id}
+            <div className="reflectionList">
+            
+           <pre>{JSON.stringify(this.props.reduxState.reflectionListReducer)}</pre> 
+           (this.props.reduxState)
+            <p>{this.props.reduxState.id}
             {this.props.reduxState.topic}
             {this.props.reduxState.description}
             {this.props.reduxState.bookmarked}
-            {this.props.reduxState.date}
+            {this.props.reduxState.date}</p>
             <button onClick={this.handleClick}>Add New</button>
+            <button onClick={this.handleClickDelete}>Delete</button>
+            
             </div>
         )
     }//switching ReflectionList to reflection, then changed to reduxState(

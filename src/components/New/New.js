@@ -50,7 +50,7 @@ class NewReflection extends Component {
                  <form onSubmit={this.addNewReflection}>
                     <input type='text' value={this.state.newReflection.topic} placeholder="Topic"/>
                     <input type='text' value={this.state.newReflection.description} placeholder= "Description"/>
-                    <input type='Date' value={this.state.newReflection.date} placeholder= "Date"/>
+                    <input type='Date' value={this.state.newReflection.date} placeholder= "Date"
                                     onChange={this.handleNameChange} />
                 </form>
             </div>
