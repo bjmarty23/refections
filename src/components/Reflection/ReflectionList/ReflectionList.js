@@ -28,9 +28,25 @@ class ReflectionList extends Component {
         console.log('in posting handleClick')
         this.addNewReflection(this.props.reflection)
     }
+
+
+    handleClickDelete = () => {
+        console.log('in handleclick delete');
+        this.deleteReflection(this.props.reflection);
+    }
+
+    deleteReflection = ()=> {
+        console.log('in delete button')
+        this.props.dispatch({
+            type: 'REMOVE_REFLECTION',
+            payload: this.props.reflection
+        })
+    }
+
     render(){
         return(
-            <div className="ReflectionList">
+            <div>
+           <pre>{JSON.stringify(this.props.reduxState)}</pre> 
             {this.props.ReflectionList.id}
             {this.props.ReflectionList.topic}
             {this.props.ReflectionList.description}
@@ -41,7 +57,8 @@ class ReflectionList extends Component {
         )
     }
 
-}
+}// the component and component list do not match i bet this where 
+//the error is that is stopping the server from running
 
 
 

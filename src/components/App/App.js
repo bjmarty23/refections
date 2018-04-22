@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import axios from 'axios';
 import './App.css';
 import Nav from '../Nav/Nav'
+import ReflectionList from '../Reflection/ReflectionList/ReflectionList';
 
 class App extends Component {
 
@@ -15,6 +16,7 @@ class App extends Component {
           <h4><i>Reflection Board</i></h4>
         </header>
             <Nav  />
+            <ReflectionList  />
         <br/>
       </div>
     );

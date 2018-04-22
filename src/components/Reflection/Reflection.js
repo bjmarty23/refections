@@ -8,7 +8,7 @@ const mapStateToProps = reduxState => ({
 
 class Reflection extends Component {
 
-    //getting current data from db
+    //server request for data
     componentDidMount() {
         console.log('getting data');
         this.props.dispatch({
@@ -18,7 +18,7 @@ class Reflection extends Component {
 
     render(){
         console.log(this.props.reduxState)
-        let notes = this.props.reduxState.reflectionListReducer.map((reflection) => {
+        let reflection = this.props.reduxState.reflectionListReducer.map((reflection) => {
             return (
                 <ReflectionList key = {reflection.id}
                 topic = {reflection.topic}
@@ -31,7 +31,7 @@ class Reflection extends Component {
         return(
             <div>
                 <p>REFLECTION</p>
-                {notes}
+                {reflection}
             </div>
         );
     }
