@@ -74,7 +74,8 @@ const newReflectionReducer = (state=[], action)=> {
 //----------store----------
 const store = createStore(
    combineReducers({
-    reflectionListReducer }),
+    reflectionListReducer,
+    newReflectionReducer }),
     applyMiddleware(sagaMiddleware, logger)
 );
 

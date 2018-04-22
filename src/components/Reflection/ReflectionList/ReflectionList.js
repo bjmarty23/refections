@@ -47,15 +47,17 @@ class ReflectionList extends Component {
         return(
             <div>
            <pre>{JSON.stringify(this.props.reduxState)}</pre> 
-            {this.props.reflection.id}
-            {this.props.reflection.topic}
-            {this.props.reflection.description}
-            {this.props.reflection.bookmarked}
-            {this.props.reflection.date}
+            {this.props.reduxState.id}
+            {this.props.reduxState.topic}
+            {this.props.reduxState.description}
+            {this.props.reduxState.bookmarked}
+            {this.props.reduxState.date}
             <button onClick={this.handleClick}>Add New</button>
             </div>
         )
-    }//switching ReflectionList to reflection
+    }//switching ReflectionList to reflection, then changed to reduxState(
+        //no longer getting id undefinded error
+//)
 
 }// the component and component list do not match i bet this where 
 //the error is that is stopping the server from running
