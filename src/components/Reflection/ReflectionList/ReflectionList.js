@@ -51,20 +51,20 @@ class ReflectionList extends Component {
         return(
             <div className="reflectionList">
             
-           <pre>{JSON.stringify(this.props.reduxState.reflectionListReducer)}</pre> 
-           (this.props.reduxState)
-            <p>{this.props.reduxState.id}
-            {this.props.reduxState.topic}
-            {this.props.reduxState.description}
-            {this.props.reduxState.bookmarked}
-            {this.props.reduxState.date}</p>
+           {/* <pre>{JSON.stringify(this.props.reduxState.reflectionListReducer)}</pre>  */}
+           
+            <p>{this.props.reflection.id}
+            {this.props.reflection.topic}
+            {this.props.reflection.description}
+            {this.props.reflection.bookmarked}
+            {this.props.reflection.date}</p>
             <button onClick={this.handleClick}>Add New</button>
             <button onClick={this.handleClickDelete}>Delete</button>
             
             </div>
         )
     }//switching ReflectionList to reflection, then changed to reduxState(
-        //no longer getting id undefinded error
+        //no longer getting id undefinded error// back to reflection
 //)
 
 }// the component and component list do not match i bet this where 
